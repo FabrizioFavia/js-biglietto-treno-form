@@ -5,10 +5,10 @@
 }
 
 body{
-    background-image: url(../img/wave2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url(../img/wave.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 
 .ticketForm{
@@ -16,12 +16,16 @@ body{
     margin: 0 auto;
 }
 
+.debugHeight{min-height: 180px;}
+
 
 
 .myBlueText{color: #254496;}
 .myBlueBck{background-color: #4c6abb;}
-.myLightBck{background-color: #6998ba;}
+.myLightBck{background-color: #8AC6C1;}
 .myGreenBck{background-color: #368A60;}
+.myPurpleBck{background-color: #603ca8;}
+.myBlueBorder{border: 3px solid #368A60;}
 .shadowBox{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
 
 
