@@ -8,7 +8,7 @@ function giveTicket(event) {
     let name = document.getElementById("ticketName").value;
     let distance = document.getElementById("distance").value;
     let age = document.getElementById("age").value;
-    let coach = Math.floor( Math.random() * 10 );
+    let coach = Math.floor( Math.random() * 10 ) + 1;
     let cpCode = Math.floor( Math.random() * 10000 );
     totalPrice = (distance * kmPrice).toFixed(2);
     document.getElementById("name").innerText = `${name.toUpperCase()}`;
