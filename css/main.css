@@ -4,19 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: url(../img/wave.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-}
+
 
 .ticketForm{
     width: 900px;
     margin: 0 auto;
 }
 
-.debugHeight{min-height: 180px;}
+/* .debugHeight{min-height: 180px;} */
 
 
 
