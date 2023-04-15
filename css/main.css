@@ -2,26 +2,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif!important;
+}
+body{
+    background-color: #27242C!important;
+}
+
+p{
+    margin-bottom: 0!important;
+}
+
+.bigContainer{
+    width: 100vw;
+    min-height: calc(100vh - 64px);
+    display: inline-block;
 }
 
 
 
 .ticketForm{
-    width: 900px;
-    margin: 0 auto;
+    width: 300px;
+    max-height: 410px;
 }
+
+.mainTextBox{
+    width: 600px;
+    margin-left: 180px;
+}
+
+.mainTextBox > p{
+    font-size: 70px;
+}
+
+.debugHeight{min-height: 170px;}
 
 /* .debugHeight{min-height: 180px;} */
 
 
+.myWhiteBck{background-color: whitesmoke;}
+.myGrayBck{background-color: #282828;}
+.myLightBlackBck{background-color: #27242C;}
+.myPaynegrayBck{background-color: #586F7C;}
+.myCharcoalBck{background-color: #2F4550;}
+.myBlackBck{background-color: #000009;}
+.myGreenBck{background-color: #ACFDE6;}
+.myGreenBorder{border: 1px solid #ACFDE6;}
+
 
 .myBlueText{color: #254496;}
+.myGreenText{color: #ACFDE6!important;}
 .myBlueBck{background-color: #4c6abb;}
-.myLightBck{background-color: #8AC6C1;}
-.myGreenBck{background-color: #368A60;}
+
+
 .myPurpleBck{background-color: #603ca8;}
-.myBlueBorder{border: 3px solid #368A60;}
-.shadowBox{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+.myBlueBorder{border: 0.5px solid #368A60;}
+.shadowBox{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
 
 
 

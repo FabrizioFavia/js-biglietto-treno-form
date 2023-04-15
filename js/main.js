@@ -11,7 +11,7 @@ function giveTicket(event) {
     let coach = Math.floor( Math.random() * 10 ) + 1;
     let cpCode = Math.floor( Math.random() * 10000 );
     totalPrice = (distance * kmPrice).toFixed(2);
-    document.getElementById("name").innerText = `${name.toUpperCase()}`;
+    document.getElementById("name").innerText = `${name}`;
     document.getElementById("coach").innerText = coach;
     document.getElementById("cpCode").innerText = cpCode;
 
