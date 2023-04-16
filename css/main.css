@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{background-color: #27242C!important;}
+
+/* BACKGROUNDS AND COLORS */
+
 .myWhiteBck     {background-color: whitesmoke;}
 .myGrayBck      {background-color: #282828;}
 .myLightBlackBck{background-color: #27242C;}
@@ -16,39 +20,62 @@
 
 .myBlueText {color: #254496;}
 .myGreenText{color: #ACFDE6!important;}
-
 .myBlueBorder{border: 0.5px solid #368A60;}
+
+.borderBottom{border-bottom: 2px solid #222;}
+
 .shadowBox{box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
 
-body{
-    background-color: #27242C!important;
+/* HEADER */
+.navbar{
+    border-bottom: 1px solid white;
 }
 
+/* MAIN */
 p{
     margin-bottom: 0!important;
 }
 
 .bigContainer{
-    width: 100vw;
-    min-height: calc(100vh - 64px);
     display: inline-block;
-}
-
-.ticketForm{
-    width: 300px;
-    max-height: 410px;
+    position:relative;
 }
 
 .mainTextBox{
-    width: 600px;
-    margin-left: 180px;
+    width: 550px;
+    margin-left: 100px;
 }
 
 .mainTextBox > p{
     font-size: 70px;
 }
 
-.debugHeight{min-height: 170px;}
+.yellowLight{
+    font-size:50px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    color: #fbc108;
+}
+
+.yellowLight:hover{
+    scale: 1.2;
+    transition: 0.3s;
+}
+
+.darkLight{
+    font-size:50px;
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+}
+
+.darkLight:hover{
+    scale: 1.2;
+    transition: 0.3s;
+}
+
+
 
 
 

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,14 +24,14 @@
     <title>Boolticket</title>
 </head>
 
-<body>
+<body id="body">
 
     <!-- HEADER -->
     <header>
-        <nav class="navbar myLightBlackBck navbar-expand-lg">
+        <nav id="navbar" class="navbar navbar-expand-lg mb-5">
             <div class="container-xxl d-flex justify-content-between">
                 <div>
-                    <a class="navbar-brand fs-2 myGreenText" href="#">SusTrainable</a>
+                    <a id="logo" class="navbar-brand fs-2 myGreenText" href="#">SusTrainable</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -40,15 +41,14 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item myGreenText">
-                                <a class="nav-link active myGreenText" aria-current="page" href="#">Home</a>
+                                <a id="home" class="nav-link active myGreenText" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link myGreenText" href="#">Features</a>
+                                <a id="features" class="nav-link myGreenText" href="#">Features</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link myGreenText" href="#">Pricing</a>
+                                <a id="pricing" class="nav-link myGreenText" href="#">Pricing</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
@@ -59,80 +59,89 @@
     <!-- MAIN -->
     <main>
 
-        <div class="bigContainer mt-0 myLightBlackBck d-flex justify-content-start  pt-5 ps-5">
-            <!-- TITOLO FORM -->
-
-
-            <!-- FORM -->
-            <div class="ticketForm mt-5 pb-4 myGreenBorder myWhiteBck rounded rounded-5 mb-5 me-5 ms-5">
-                <div class="row g-0 justify-content-center">
-                    <div class="col-10">
-                        <form>
-                            <div class="mt-4">
-                                <label for="userName" class="form-label fw-2 mb-1">Nome Cognome</label>
-                                <input type="text" class="form-control userName" id="ticketName">
+        <div class="container-xxl">
+            <div class="row pt-5 justify-content-center">
+                <!-- FORM -->
+                <div class="col-3 d-flex justify-content-center pt-5">
+                    <div id="form" class="ticketForm myGreenBorder myWhiteBck rounded rounded-5">
+                        <div class="row g-0 justify-content-center">
+                            <div class="col-10">
+                                <form>
+                                    <div class="mt-4">
+                                        <label for="userName" class="form-label fw-2 mb-1">Nome Cognome</label>
+                                        <input type="text" class="form-control userName" id="ticketName">
+                                    </div>
                             </div>
-                    </div>
-                    <div class="col-10">
-                        <div class="mt-4">
-                            <label for="km" class="form-label fw-2 mb-1">Km da percorrere</label>
-                            <input type="number" class="form-control s distance" id="distance">
+                            <div class="col-10">
+                                <div class="mt-4">
+                                    <label for="km" class="form-label fw-2 mb-1">Km da percorrere</label>
+                                    <input type="number" class="form-control s distance" id="distance">
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="mt-4">
+                                    <label for="km" class="form-label fw-2 mb-1">Fascia d'età</label>
+                                    <input type="number" class="form-control age" id="age">
+                                </div>
+                            </div>
+                            </form>
+                            <div class="col-8 d-flex justify-content-center mt-4">
+                                <button onclick="giveTicket(event)" type="button"
+                                    class="btn btn-warning me-2 mt-5">Genera</button>
+                                <button onclick="darkBulb()" type="button"
+                                    class="btn btn-warning ms-2 mt-5">Annulla</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-10">
-                        <div class="mt-4">
-                            <label for="km" class="form-label fw-2 mb-1">Fascia d'età</label>
-                            <input type="number" class="form-control age" id="age">
+                </div>
+
+                <!-- TICKET -->
+                <div class="col-3 d-flex justify-content-center pt-5 ms-5">
+                    <div id="ticket" class="ticketForm p-4 bg-white rounded rounded-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>DETTAGLIO PASSEGGERI</h5>
+                            </div>
+                            <div class="ticketSpace col-12 border mt-3 myLightBlackBck">
+                                <p id="passengerName" class="mb-2 fs-6 fw-bold myGreenText">NOME PASSEGGERO</p>
+                                <p id="name" class="fs-6 text-white mt-3">-</p>
+                            </div>
+                            <div class="ticketSpace col-12 border myLightBlackBck">
+                                <p id="ticketSale" class="mb-2 fw-bold myGreenText">Offerta</p>
+                                <p id="ticketType" class="text-white mt-3">-</p>
+                            </div>
+                            <div class="ticketSpace col-12 border myLightBlackBck">
+                                <p id="coachTitle" class="mb-2 fw-bold myGreenText">Carrozza</p>
+                                <p id="coach" class="text-white mt-3">-</p>
+                            </div>
+                            <div class="ticketSpace col-12 border myLightBlackBck">
+                                <p id="codeTitle" class="mb-2 fw-bold myGreenText">Codice CP</p>
+                                <p id="cpCode" class="text-white mt-3">-</p>
+                            </div>
+                            <div class="ticketSpace col-12 border rounded-bottom myLightBlackBck">
+                                <p id="ticketPrice" class="mb-2 fw-bold myGreenText">Costo biglietto</p>
+                                <p id="price" class="text-white mt-3">-</p>
+                            </div>
                         </div>
                     </div>
-                    </form>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-8 d-flex justify-content-center mt-4">
-                        <button onclick="giveTicket(event)" type="button"
-                            class="btn btn-outline-secondary me-2">Genera</button>
-                        <button onclick="givePrice(event)" type="button"
-                            class="btn btn-outline-secondary ms-2">Annulla</button>
+
+                <!-- TEXT BOX -->
+                <div class="col-5 pt-5">
+                    <div class="mainTextBox">
+                        <p id="paperless" class="myGreenText">Make an eco-friendly choice, buy a <span class="">paperless</span> ticket.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- TITOLO TICKET -->
-
-
-            <!-- TICKET -->
-            <div class="ticketForm mt-5 p-4 bg-white rounded rounded-5 ms-5 me-5">
+                <!-- BULB SECTION -->
                 <div class="row">
-                    <div class="col-12">
-                        <h5>DETTAGLIO PASSEGGERI</h5>
-                    </div>
-                    <div class="col-12 border mt-3 myLightBlackBck">
-                        <p class=" fs-6 fw-bold myGreenText">NOME PASSEGGERO</p>
-                        <p class="fs-6 text-white" id="name">-</p>
-                    </div>
-                    <div class="col-12 border myLightBlackBck">
-                        <p class="mb-2 fw-bold myGreenText">Offerta</p>
-                        <p id="ticketType" class="text-white">-</p>
-                    </div>
-                    <div class="col-12 border myLightBlackBck">
-                        <p class="mb-2 fw-bold myGreenText">Carrozza</p>
-                        <p id="coach" class="text-white">-</p>
-                    </div>
-                    <div class="col-12 border myLightBlackBck">
-                        <p class="mb-2 fw-bold myGreenText">Codice CP</p>
-                        <p id="cpCode" class="text-white">-</p>
-                    </div>
-                    <div class="col-12 border rounded-bottom myLightBlackBck">
-                        <p class="mb-2 fw-bold myGreenText">Costo biglietto</p>
-                        <p id="price" class="text-white">-</p>
+                    <div class="col-12 mt-5 d-flex justify-content-end">
+                        <i onclick="whiteLight()" class="yellowLight fa-regular fa-lightbulb mt-5"></i>
+                        <i onclick="darkLight()" class="darkLight fa-regular fa-lightbulb mt-5"></i>
+
                     </div>
                 </div>
-
             </div>
-            <div class="mainTextBox mt-5">
-                <p class="myGreenText">Make an eco-friendly choice, purchase a paperless ticket.</p>
-            </div>
-        </div>
     </main>
     <script src="./js/main.js"></script>
 
