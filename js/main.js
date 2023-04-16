@@ -33,6 +33,9 @@ function giveTicket(event) {
 
 function whiteLight() {
 
+    var yellowLightBulb = document.getElementById("yellowLightBulb");
+    yellowLightBulb.classList.add("hidden");
+
     var body = document.getElementById("body");
     body.classList.add("bg-white");
 
@@ -56,6 +59,9 @@ function whiteLight() {
 
     var navbar = document.getElementById("navbar");
     navbar.classList.add("border-2");
+
+    var navbar = document.getElementById("navbar");
+    navbar.classList.add("myLightBlackBck");
 
     var form = document.getElementById("form");
     form.classList.add("border");
@@ -93,6 +99,9 @@ function whiteLight() {
 
 function darkLight() {
 
+    var yellowLightBulb = document.getElementById("yellowLightBulb");
+    yellowLightBulb.classList.remove("hidden");
+
     var body = document.getElementById("body");
     body.classList.remove("bg-white");
 
@@ -116,6 +125,9 @@ function darkLight() {
 
     var navbar = document.getElementById("navbar");
     navbar.classList.remove("border-2");
+
+    var navbar = document.getElementById("navbar");
+    navbar.classList.remove("bg-dark");
 
     var form = document.getElementById("form");
     form.classList.remove("border");
