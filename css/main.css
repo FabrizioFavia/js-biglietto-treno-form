@@ -17,6 +17,7 @@ body{background-color: #27242C!important;}
 .myBlackBck     {background-color: #000009;}
 .myGreenBck     {background-color: #ACFDE6;}
 .myBlueBck      {background-color: #4c6abb;}
+.myYellowBck    {background-color: #FCFFCD;}
 
 .myBlueText {color: #254496;}
 .myGreenText{color: #ACFDE6!important;}
@@ -44,7 +45,7 @@ p{
 }
 
 .mainTextBox{
-    width: 550px;
+    width: 500px;
     margin-left: 100px;
 }
 
@@ -76,9 +77,3 @@ p{
     scale: 1.2;
     transition: 0.3s;
 }
-
-
-
-
-
-
