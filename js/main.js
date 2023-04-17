@@ -92,65 +92,29 @@ function whiteLight() {
 
 function darkLight() {
 
-    var yellowLightBulb = document.getElementById("yellowLightBulb");
     yellowLightBulb.classList.remove("hidden");
-
-    var body = document.getElementById("body");
     body.classList.remove("bg-white");
-
-    var paperless = document.getElementById("paperless");
     paperless.classList.remove("text-warning");
-
-    var logo = document.getElementById("logo");
     logo.classList.remove("text-warning");
-
-    var home = document.getElementById("home");
     home.classList.remove("text-warning");
-
-    var features = document.getElementById("features");
     features.classList.remove("text-warning");
-
-    var pricing = document.getElementById("pricing");
     pricing.classList.remove("text-warning");
-
-    var navbar = document.getElementById("navbar");
     navbar.classList.remove("border-bottom");
-
-    var navbar = document.getElementById("navbar");
     navbar.classList.remove("border-2");
-
-    var navbar = document.getElementById("navbar");
     navbar.classList.remove("bg-dark");
-
-    var form = document.getElementById("form");
     form.classList.remove("border");
-
-    var form = document.getElementById("form");
     form.classList.remove("border-2");
-
-    var ticket = document.getElementById("ticket");
     ticket.classList.remove("border");
-
-    var ticket = document.getElementById("ticket");
     ticket.classList.remove("border-2");
+    passengerName.classList.remove("text-dark");
+    ticketSale.classList.remove("text-dark");
+    coachTitle.classList.remove("text-dark");
+    codeTitle.classList.remove("text-dark");
+    ticketPrice.classList.remove("text-dark");
 
-    const ticketSpace = document.querySelectorAll(".ticketSpace");
     for (let i = 0; i < ticketSpace.length; i++) {
         ticketSpace[i].style.backgroundColor = "#27242c";
     };
 
-    var passengerName = document.getElementById("passengerName");
-    passengerName.classList.remove("text-dark");
-
-    var ticketSale = document.getElementById("ticketSale");
-    ticketSale.classList.remove("text-dark");
-
-    var coachTitle = document.getElementById("coachTitle");
-    coachTitle.classList.remove("text-dark");
-
-    var codeTitle = document.getElementById("codeTitle");
-    codeTitle.classList.remove("text-dark");
-
-    var ticketPrice = document.getElementById("ticketPrice");
-    ticketPrice.classList.remove("text-dark");
+    
 }
