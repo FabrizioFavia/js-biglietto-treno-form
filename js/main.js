@@ -92,6 +92,7 @@ function whiteLight() {
 
 function darkLight() {
 
+    const ticketSpace = document.querySelectorAll(".ticketSpace");
     yellowLightBulb.classList.remove("hidden");
     body.classList.remove("bg-white");
     paperless.classList.remove("text-warning");
